@@ -1,0 +1,47 @@
+@import "../../assets/variables.scss";
+
+#traffic-overview {
+	border-radius: 4px;
+	background: #fff;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	box-shadow: $shadow-default;
+
+	.container {
+  		padding: 20px;
+
+		@media screen and (max-width: $break-sm) {
+			padding-bottom: 0;
+		}
+  	}
+
+}
+
+.graph {
+	width: 100%;
+	display: block;
+	position: relative;
+	border-radius: 10px;
+
+	.graph-wrapper {
+		padding: 20px 0 0 0;
+		height: 350px;
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		transition: background 0.3s ease-in-out;
+		background: #fff;
+
+		&.loading {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #e8e8e8;
+		}
+
+		@media screen and (max-width: $break-sm) {
+			height: 180px;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+$c-blue: #30a5ff;
+$c-yellow: #ffb53e;
+$c-green: #1ebfae;
+$c-red: #f9243f;
+$c-g1: #8ad919;
+$c-g2: #a4df50;
+$c-brand: #4fa544;
+
+$shadow-default: 0px 1px 5px 0px rgba(0,0,0,0.2);
+$shadow-hover: 0px 4px 10px 0px rgba(0,0,0,0.25);
+
+$break-md: 621px;
+$break-sm: 439px;
+
+@mixin gradientBg() {
+	background: $c-g1;
+	/*background: -moz-linear-gradient(left, $c-g1 0%, $c-g2 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, $c-g1), color-stop(100%, $c-g2));
+	background: -webkit-linear-gradient(left, $c-g1 0%, $c-g2 100%);
+	background: -o-linear-gradient(left, $c-g1 0%, $c-g2 100%);
+	background: -ms-linear-gradient(left, $c-g1 0%, $c-g2 100%);*/
+	background: linear-gradient(to right, $c-g1 0%, $c-g2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#129a67', endColorstr='#1fc48f', GradientType=1 );
+}
+
+@mixin displaceBg() {
+	background: linear-gradient(90deg, $c-g2, $c-g1, $c-g2, $c-g1);
+	background-size: 400% 400%;
+
+	-webkit-animation: animateBg 4s ease infinite;
+	-moz-animation: animateBg 4s ease infinite;
+	animation: animateBg 4s ease infinite;
+
+	@-webkit-keyframes animateBg {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+	@-moz-keyframes animateBg {
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+	@keyframes animateBg { 
+	    0%{background-position:0% 50%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 50%}
+	}
+}
+
+@mixin displaceBgSlow() {
+	-webkit-animation: animateBg 12s ease infinite;
+	-moz-animation: animateBg 12s ease infinite;
+	animation: animateBg 12s ease infinite;
+}

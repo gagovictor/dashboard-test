@@ -1,0 +1,144 @@
+@import "assets/variables.scss";
+
+/* Global */
+html,
+body {
+  font-size: 20px;
+  color: #5f6468;
+  background: #f1f4f7;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px #dcdcdc solid;
+}
+
+section,
+header,
+footer {
+  width: 100%;
+
+  > .container {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+  }
+}
+
+/* Style Classes */
+.gradient {
+  @include gradientBg();
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .half {
+    padding: 0 15px;
+
+    &:first-of-type() {
+      padding-left: 0;
+    }
+
+    &:last-of-type() {
+      padding-left: 0;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+
+  > div {
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+.space {
+  padding: 10px 0;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+/* Elements */
+h1, h2, h3,
+h4, h5, h6, p {
+  display: inline-block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 21.73px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+a,
+link {
+  color: inherit;
+}
+
+button {
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 21.73px;
+  text-align: center;
+  background: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+input,
+button,
+a,
+textarea,
+select {
+  outline: none;
+}
+
+.box {
+  max-width: 100%;
+  background: #fff;
+  box-shadow: $shadow-default;
+
+  .container {
+    padding: 20px;
+  }
+}
